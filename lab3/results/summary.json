@@ -1,0 +1,30 @@
+{
+  "nsga2": {
+    "best": 0.09030172413793104,
+    "mean": 0.09405172413793103,
+    "median": 0.09418103448275862,
+    "std": 0.001963331003059264,
+    "worst": 0.09806034482758622,
+    "runs": 20,
+    "mean_seconds": 1.1879439749987797,
+    "feasible_fraction": 0.45,
+    "hypervolume_mean": 203792.05,
+    "hypervolume_std": 754.9187809224736,
+    "front_size_mean": 88.75,
+    "front_size_std": 2.572629210094525
+  },
+  "weighted": {
+    "best": 0.09030172413793104,
+    "mean": 0.09030172413793106,
+    "median": 0.09030172413793104,
+    "std": 1.4238309865648918e-17,
+    "worst": 0.09030172413793104,
+    "runs": 20,
+    "mean_seconds": 0.6820594350036118,
+    "feasible_fraction": 0.0,
+    "hypervolume_mean": 196047.95,
+    "hypervolume_std": 1116.057793023471,
+    "front_size_mean": 35.35,
+    "front_size_std": 3.0482954684803594
+  }
+}
