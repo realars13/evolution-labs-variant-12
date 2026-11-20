@@ -1,0 +1,9 @@
+{
+  "student": {"group": 517, "N": 14, "Q": 1, "Y": 26, "V": 12},
+  "data_seed": 10114,
+  "first_seed": 12000,
+  "lab1": {"runs": 20, "budget": 12000, "population": 60, "dimension": 5, "lower": -500, "upper": 500, "mutation_scales": [0.01, 0.05]},
+  "lab2": {"runs": 20, "budget": 4020, "population": 60, "customers": 20, "crossover_probability": 0.9, "mutation_probability": 0.8},
+  "lab3": {"runs": 20, "budget": 12060, "population": 60, "events": 24, "days": 5, "slots_per_day": 5},
+  "lab4": {"runs": 30, "budget": 16000, "population": 40, "offspring": 80, "dimension": 5}
+}
