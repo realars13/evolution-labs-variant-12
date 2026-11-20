@@ -1,0 +1,16 @@
+[
+  {
+    "function": "qing",
+    "adaptive_wins": 30,
+    "ties": 0,
+    "fixed_wins": 0,
+    "median_ratio_fixed_to_adaptive": 3.591956752919306e+19
+  },
+  {
+    "function": "ellipsoid",
+    "adaptive_wins": 30,
+    "ties": 0,
+    "fixed_wins": 0,
+    "median_ratio_fixed_to_adaptive": 2.569995806584317e+19
+  }
+]
