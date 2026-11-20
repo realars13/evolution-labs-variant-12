@@ -62,6 +62,15 @@ class AlgorithmTests(unittest.TestCase):
         np.testing.assert_array_equal(s.objectives([[0,2,0]],data),[[1,1,0]])
         np.testing.assert_array_equal(s.objectives([[0,3,4]],data),[[0,2,2]])
 
+    def test_schedule_availability_and_archive(self):
+        data=s.generate_data()
+        result=s.search(data,np.random.default_rng(12),660,population=30)
+        values=s.objectives(result['solutions'],data)
+        np.testing.assert_array_equal(values,result['front'])
+        self.assertEqual(len(values),len(np.unique(values,axis=0)))
+        self.assertEqual(len(s.fronts(values)),1)
+        with self.assertRaises(ValueError):s.objectives([[1]*24],data)
+
     def test_reproducibility_and_exact_budgets(self):
         for algorithm in [lambda rng:real_ga(qing,rng,137,population=30),
                           lambda rng:evolution_strategy(qing,rng,137,population=30,offspring=40),
