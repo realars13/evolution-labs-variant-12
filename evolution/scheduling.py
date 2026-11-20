@@ -119,9 +119,9 @@ def search(data,rng,budget,population=60,method='nsga2'):
         if method=='nsga2': chosen=environmental(combined_f,population)
         else: chosen=np.argsort((combined_f/normalizer)@weights,kind='stable')[:population]
         x,f=combined_x[chosen],combined_f[chosen]
-        # Same external archive for BOTH algorithms; retain distinct genotypes.
+        # Same archive for BOTH algorithms; one witness per objective vector.
         archive_x=np.vstack([archive_x,children]);archive_f=np.vstack([archive_f,cf])
-        _,unique=np.unique(archive_x,axis=0,return_index=True)
+        _,unique=np.unique(archive_f,axis=0,return_index=True)
         nondominated=fronts(archive_f[unique])[0]
         keep=unique[nondominated]
         archive_x,archive_f=archive_x[keep],archive_f[keep]
